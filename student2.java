@@ -1,43 +1,27 @@
-class student2 extends inheritance2 {
-    protected String name;
-    protected String address;
-    protected String program;
-    protected int year;
-    protected String toString;
+class Student extends Person{
+    private String Program;
+    private int year;
 
-
-    public student2 (String name, String address, String program,int year) {
-        this.name = name;
-        this.address = address;
-        this.program = program;
+    public Student (String Name, String Address, String Program, int year){
+        this.Name = Name;
+        this.Address = Address;
+        this.Program = Program;
         this.year = year;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setProgram(String Program){
+        this.Program = Program;
     }
-    public void setAddress(String address) {
-        this.address = address;
-    }
-    public void setProgram(String program) {
-        this.program = program;
-    }
-    public void setyear(int year) {
+    public void setYear(int year){
         this.year = year;
     }
-    public String getName() {
-        return name;
+    public String getProgram(){
+        return Program;
     }
-    public String getAddress() {
-        return address;
-    }
-    public String getProgram() {
-        return program;
-    }
-    public int getYear() {
+    public int getYear(){
         return year;
     }
+    @Override
     public String toString(){
-        return "Hello I am "+ name + " I Lived in "+ address +"." + " I am " + year + " year of BSIT.";
+        return "Hello I am " + Name + " I lived in " + Address + ". I am " + year + " year of " + Program + ". ";
     }
-    
 }
