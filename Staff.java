@@ -1,26 +1,27 @@
-class staff extends person {
-    private String school;
-    private double salary;
+public class Staff extends Person{
+    protected String School;
+    protected int Salary;
 
-    public staff(String name, String address, String school, double salary) {
-        super(name, address);
-        this.school = school;
-        this.salary = salary;
+    public Staff(String Name, String Address, String School, int Salary){
+        this.Name = Name;
+        this.Address = Address;
+        this.School = School;
+        this.Salary = Salary;
     }
-
-    public void setSchool(String school) {
-        this.school = school;
+    public void setSchool(String School){
+        this.School = School;
     }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setSalary(int Salary){
+        this.Salary = Salary;
     }
-
-    public String getSchool() {
-        return school;
+    public String getSchool(){
+        return School;
     }
-
-    public double getSalary() {
-        return salary;
+    public int getSalary(){
+        return Salary;
+    }
+    @Override
+    public String toString() {
+        return "Hello I am " + Name + " I work at " + School + " with a salary of " + Salary + ".";
     }
 }
